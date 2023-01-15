@@ -1,0 +1,7 @@
+23:25:08 **** Clean-only build of configuration Debug for project module2 ****
+make clean 
+rm -rf ./src/gic.o ./src/platform.o ./src/step3-outline.o ./src/gic.d ./src/platform.d ./src/step3-outline.d module2.elf.size  module2.elf
+ 
+
+23:25:09 Build Finished (took 225ms)
+
