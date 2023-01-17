@@ -1,7 +1,6 @@
-23:25:09 **** Clean-only build of project module2_hw_wrapper ****
-buildplatform.sh 42649 module2_hw_wrapper clean 
-XSDB Server Channel: tcfchan#1
-Reading the platform  : "module2_hw_wrapper"
+17:02:17 **** Clean-only build of project module2_hw_wrapper ****
+buildplatform.sh 33219 module2_hw_wrapper clean 
+XSDB Server Channel: tcfchan#51
 Cleaning the zynq_fsbl application.
 rm -rf  fsbl_hooks.o  image_mover.o  main.o  md5.o  nand.o  nor.o  pcap.o  ps7_init.o  qspi.o  rsa.o  sd.o  fsbl_handoff.o zynq
 _fsbl_bsp/ps7_cortexa9_0/lib/libxil.a fsbl.elf *.o
@@ -85,5 +84,5 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_6/src -s clean
 rm -f ps7_cortexa9_0/lib/libxil.a
 
 
-23:25:22 Build Finished (took 12s.999ms)
+17:02:28 Build Finished (took 10s.490ms)
 
