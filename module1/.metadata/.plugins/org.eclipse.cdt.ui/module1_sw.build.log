@@ -1,0 +1,35 @@
+16:22:58 **** Build of configuration Debug for project module1_sw ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/blinky.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blinky.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/thayerfs/home/f003xh9/workspace/module1/hw_wrapper/export/hw_wrapper/sw/hw_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/blinky.d" -MT"src/blinky.o" -o "src/blinky.o" "../src/blinky.c"
+Finished building: ../src/blinky.c
+ 
+Building file: ../src/led.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/thayerfs/home/f003xh9/workspace/module1/hw_wrapper/export/hw_wrapper/sw/hw_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/led.d" -MT"src/led.o" -o "src/led.o" "../src/led.c"
+Finished building: ../src/led.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/thayerfs/home/f003xh9/workspace/module1/hw_wrapper/export/hw_wrapper/sw/hw_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: module1_sw.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/thayerfs/home/f003xh9/workspace/module1/hw_wrapper/export/hw_wrapper/sw/hw_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "module1_sw.elf" ./src/blinky.o ./src/led.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: module1_sw.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size module1_sw.elf  |tee "module1_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  58015	   2588	  22720	  83323	  1457b	module1_sw.elf
+Finished building: module1_sw.elf.size
+ 
+
+16:23:00 Build Finished (took 1s.81ms)
+

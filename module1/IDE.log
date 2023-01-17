@@ -1,0 +1,22 @@
+16:12:45 INFO  : Logs will be stored at '/thayerfs/home/f003xh9/workspace/module1/IDE.log'.
+16:12:46 INFO  : Launching XSCT server: xsct -n  -interactive /thayerfs/home/f003xh9/workspace/module1/temp_xsdb_launch_script.tcl
+16:12:46 INFO  : Platform repository initialization has completed.
+16:12:46 INFO  : Registering command handlers for Vitis TCF services
+16:12:49 INFO  : XSCT server has started successfully.
+16:12:49 INFO  : Successfully done setting XSCT server connection channel  
+16:12:52 INFO  : plnx-install-location is set to ''
+16:12:52 INFO  : Successfully done setting workspace for the tool. 
+16:12:52 INFO  : Successfully done query RDI_DATADIR 
+16:14:16 INFO  : Result from executing command 'getProjects': hw_wrapper
+16:14:16 INFO  : Result from executing command 'getPlatforms': 
+16:14:17 WARN  : An unexpected exception occurred in the module 'platform project logging'
+16:14:18 INFO  : Platform 'hw_wrapper' is added to custom repositories.
+16:14:26 INFO  : Platform 'hw_wrapper' is added to custom repositories.
+16:18:45 INFO  : Result from executing command 'getProjects': hw_wrapper
+16:18:45 INFO  : Result from executing command 'getPlatforms': hw_wrapper|/thayerfs/home/f003xh9/workspace/module1/hw_wrapper/export/hw_wrapper/hw_wrapper.xpfm
+16:18:48 INFO  : Checking for BSP changes to sync application flags for project 'module1_sw'...
+16:21:58 INFO  : Checking for BSP changes to sync application flags for project 'module1_sw'...
+16:22:11 INFO  : Result from executing command 'removePlatformRepo': 
+16:22:53 INFO  : Result from executing command 'getProjects': hw_wrapper
+16:22:53 INFO  : Result from executing command 'getPlatforms': 
+16:22:57 INFO  : Checking for BSP changes to sync application flags for project 'module1_sw'...
