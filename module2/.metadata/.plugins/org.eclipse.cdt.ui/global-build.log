@@ -1,98 +1,29 @@
 Nothing to build in platform 'module2_hw_wrapper'
 
-17:00:31 **** Incremental Build of configuration Debug for project module2 ****
+19:33:04 **** Incremental Build of configuration Debug for project module2 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
  
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
-17:02:17 **** Clean-only build of configuration Debug for project module2 ****
-make clean 
-rm -rf ./src/gic.o ./src/io.o ./src/led.o ./src/platform.o ./src/step3-outline.o ./src/gic.d ./src/io.d ./src/led.d ./src/platform.d ./src/step3-outline.d module2.elf.size  module2.elf
+Building file: ../src/io.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/io.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/thayerfs/home/f003wvc/workspace/module2/module2_hw_wrapper/export/module2_hw_wrapper/sw/module2_hw_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/io.d" -MT"src/io.o" -o "src/io.o" "../src/io.c"
+Finished building: ../src/io.c
  
-17:02:17 **** Clean-only build of project module2_hw_wrapper ****
-buildplatform.sh 33219 module2_hw_wrapper clean 
-XSDB Server Channel: tcfchan#51
-Cleaning the zynq_fsbl application.
-rm -rf  fsbl_hooks.o  image_mover.o  main.o  md5.o  nand.o  nor.o  pcap.o  ps7_init.o  qspi.o  rsa.o  sd.o  fsbl_handoff.o zynq
-_fsbl_bsp/ps7_cortexa9_0/lib/libxil.a fsbl.elf *.o
-
-Cleaning the zynq_fsbl application, bsp
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_8/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/emacps_v3_15/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_9/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/gpio_v4_8/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/qspips_v3_9/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/scugic_v4_6/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_4/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/sdps_v3_13/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/standalone_v7_6/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/uartps_v3_11/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/usbps_v2_7/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_6/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/xilffs_v4_6/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s clean 
-
-rm -f ps7_cortexa9_0/lib/libxil.a
-
-Cleaning the BSP for domain  - standalone_ps7_cortexa9_0
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_8/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/emacps_v3_15/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_9/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/gpio_v4_8/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/qspips_v3_9/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/scugic_v4_6/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_4/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/sdps_v3_13/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/standalone_v7_6/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/uartps_v3_11/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/usbps_v2_7/src -s clean 
-
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_6/src -s clean 
-
-rm -f ps7_cortexa9_0/lib/libxil.a
-
+Building file: ../src/step3-outline.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/step3-outline.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/thayerfs/home/f003wvc/workspace/module2/module2_hw_wrapper/export/module2_hw_wrapper/sw/module2_hw_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/step3-outline.d" -MT"src/step3-outline.o" -o "src/step3-outline.o" "../src/step3-outline.c"
+Finished building: ../src/step3-outline.c
+ 
+Building target: module2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/thayerfs/home/f003wvc/workspace/module2/module2_hw_wrapper/export/module2_hw_wrapper/sw/module2_hw_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "module2.elf" ./src/gic.o ./src/io.o ./src/led.o ./src/platform.o ./src/step3-outline.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: module2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size module2.elf  |tee "module2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64055	   3380	  22800	  90235	  1607b	module2.elf
+Finished building: module2.elf.size
+ 

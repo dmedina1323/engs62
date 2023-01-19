@@ -54,3 +54,5 @@ bool led_get(u32 led);
  */
 void led_toggle(u32 led);
 
+void led_sw_set(u32 led);
+

@@ -23,3 +23,12 @@ platform generate
 platform clean
 platform generate
 platform clean
+platform generate
+platform clean
+platform generate
+platform clean
+platform active {module2_hw_wrapper}
+platform config -updatehw {/thayerfs/home/f003wvc/workspace/module2/module2_hw_wrapper.xsa}
+platform generate
+platform config -updatehw {/thayerfs/home/f003wvc/workspace/module2/module2_hw_wrapper.xsa}
+platform generate -domains 

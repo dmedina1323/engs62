@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="module1" location="/thayerfs/home/f003wvc/workspace/module1/module1" platform="/thayerfs/home/f003wvc/workspace/module1/module1_hw_wrapper/export/module1_hw_wrapper/module1_hw_wrapper.xpfm" platformUID="xilinx:zybo-z7-10::0.0(custom)" systemProject="module1_system" sysConfig="module1_hw_wrapper" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="b0ea73513a746ff4ecd0feb6a202eae4">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.960441064" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1196645703" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

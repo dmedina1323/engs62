@@ -11,6 +11,7 @@
 #include "xil_types.h"		/* types used by xilinx */
 
 #define CHANNEL1 1
+#define CHANNEL2 2
 
 /*
  * initialize the btns providing a callback

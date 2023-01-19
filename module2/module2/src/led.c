@@ -98,4 +98,8 @@ void led_toggle(u32 led) {
 	XGpio_DiscreteWrite(&port, CHANNEL, current);
 }
 
+void led_sw_set(u32 led) {
+	XGpio_DiscreteWrite(&port, CHANNEL, led);
+}
+
 

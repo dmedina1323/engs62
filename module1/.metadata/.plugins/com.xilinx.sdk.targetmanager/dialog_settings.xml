@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="module1_system-bitFile" value="${project_loc:module1}/_ide/bitstream/module1_hw_wrapper.bit"/>
+	<item key="module1_system-bmmFile" value=""/>
+	<item key="module1_system-target" value="Local"/>
+	<item key="module1_system-device" value="Auto Detect"/>
+	<item key="module1_system-partial_bit" value="false"/>
+	<item key="module1_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="module1_system"/>
+</section>
