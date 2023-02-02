@@ -6,6 +6,7 @@
  *  -- XPAR_FABRIC_GPIO_1_VEC_ID -- xparameters.h
  *  -- XGPIO_IR_CH1_MASK         -- xgpio_l.h (included by xgpio.h)
  */
+
 #include <stdio.h>		/* getchar,printf */
 #include <stdlib.h>		/* strtod */
 #include <stdbool.h>		/* type bool */
@@ -20,6 +21,8 @@
 #include "xgpio.h"		/* axi gpio interface */
 #include "io.h"
 #include "ttc.h"
+#include "xtmrctr.h"
+#include "servo.h"
 
 #define CHANNEL1 1
 #define TIMERFREQ 1
@@ -58,6 +61,9 @@ int main() {
   io_sw_init(sw_callback);
   ttc_init(TIMERFREQ, ttc_callback);
   ttc_start();
+  servo_init();
+
+  double dutycycle = INIT_DUTYCYCLE;
 
   setvbuf(stdin,NULL,_IONBF,0);
 
@@ -65,25 +71,19 @@ int main() {
   int firstChar;
   	int c;
   	int i=0;
+  	char word[20];
+	char* low = "low";
+	char* high = "high";
 
   	while (1){
   		// start a new input line and echo
   		printf(">");
   		c = getchar();
+  		word[i] = c;
+
   		printf("%c", c);
   		i++;
 
-  		// keep reading until a \r is encountered
-  		while (c != '\r'){
-  			// we only care about the first number
-  			if (i == 1){
-  				firstChar = c;
-  			}
-  			// get another character and echo for the loop
-  			c = getchar();
-  			printf("%c", c);
-  			i++;
-  		}
   		printf("\n\r");
   		// quit on q
   		if (i == 2 && firstChar == 'q'){
@@ -100,7 +100,31 @@ int main() {
   			printf("The program was quit.\n\r");
   			return 0;
   		}
-
+  		word[i-1] = '\0';
+  		if (strcmp(word, low) == 0){
+  			dutycycle = 0.0675;
+  			printf("Duty cycle: %f\n", dutycycle*100);
+  			servo_set(dutycycle);
+  		}
+  		else if (strcmp(word, high) == 0){
+  			dutycycle = 0.0975;
+  			printf("Duty cycle: %f\n", dutycycle*100);
+  			servo_set(dutycycle);
+  		}
+  		else if (firstChar == 'a') {
+  			if (dutycycle >= 0.0675 && dutycycle < 0.0975) {
+  				dutycycle += 0.0025;
+  				printf("Duty cycle: %f\n", dutycycle*100);
+  				servo_set(dutycycle);
+  			}
+		}
+		else if (firstChar == 's') {
+			if (dutycycle > 0.0675 && dutycycle <= 0.0975) {
+				dutycycle -= 0.0025;
+				printf("Duty cycle: %f\n", dutycycle*100);
+				servo_set(dutycycle);
+			}
+		}
   		// only print when one number was input and it's [0,3]
   		// i is the number of times that a key has been entered
   		// ex: 1\r would be i=2
@@ -123,5 +147,23 @@ int main() {
   printf("\n[done]\n");
 
   return 0;
+}
+
+char* getLine(){
+	char c = '';
+	char word[20];
+
+	// keep reading until a \r is encountered
+	while (c != '\r'){
+		// we only care about the first number
+		if (i == 1){
+			firstChar = c;
+		}
+		// get another character and echo for the loop
+		c = getchar();
+		word[i] = c;
+		printf("%c", c);
+		i++;
+	}
 }
 
